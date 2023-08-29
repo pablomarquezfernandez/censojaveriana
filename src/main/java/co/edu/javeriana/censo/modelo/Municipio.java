@@ -13,7 +13,6 @@ public class Municipio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 	
-	Long idDepartamento;
 	String nombre;
 	String codigo;
 	
@@ -22,9 +21,8 @@ public class Municipio {
 	public Municipio( ) {
 		super();
 	}
-	public Municipio( Long idDepartamento, String nombre, String codigo) {
+	public Municipio(  String nombre, String codigo ) {
 		super();
-		this.idDepartamento = idDepartamento;
 		this.nombre = nombre;
 		this.codigo = codigo;
 	}

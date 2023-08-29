@@ -1,10 +1,16 @@
 package co.edu.javeriana.censo.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 import co.edu.javeriana.censo.util.Util;
@@ -32,10 +38,17 @@ public class Registro {
 	Departamento departamento;
 
 	
+	@ManyToMany
+	@JoinTable( name = "municipio_registro",  joinColumns = @JoinColumn(name = "id_registro"),  inverseJoinColumns = @JoinColumn(name = "id_municipio"))
+	List<Municipio> municipios = new ArrayList<Municipio>();;
+	
+//	@ManyToAny
+	
 	
 	public Registro() {
 		super();
 	}
+	
 	public Registro(String nombre, String tipoDocumento, String numeroDocumento, String correoElectronico, String telefono, boolean aceptaTerminosCondiciones,  Municipio municipio, Departamento departamento) {
 		super();
 		this.nombre = Util.formatear( nombre );
@@ -82,6 +95,13 @@ public class Registro {
 		return aceptaTerminosCondiciones;
 	}
 	
+	
+	public List<Municipio> getMunicipios(){
+		return municipios;
+	}
+	public void setMunicipios(List<Municipio>municipios ){
+		this.municipios = municipios;
+	}
 	
 	public void validarAceptarTerminosCondiciones() throws Exception{
 		String mensaje = "";

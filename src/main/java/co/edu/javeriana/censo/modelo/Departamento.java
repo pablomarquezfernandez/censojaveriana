@@ -21,13 +21,20 @@ public class Departamento {
 	Long id;
 	String nombre;
 	
-		
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_departamento")
+	List<Municipio> municipios = new ArrayList<Municipio>();
+	
+	
 	public Departamento() {
 		super();
+		this.nombre = "";
+//		this.municipios = new ArrayList<Municipio>();
 	}
 	public Departamento( String nombre) {
 		super();
 		this.nombre = nombre;
+//		this.municipios = new ArrayList<Municipio>();
 	}
 	
 	
@@ -37,6 +44,10 @@ public class Departamento {
 	public String getNombre() {
 		return nombre;
 	}
-	
-	
+	public List<Municipio> getMunicipios() {
+		return municipios;
+	}
+//	p	blic void setMunicipios(List<Municipio>municipios) {
+//		this.municipios = municipios;
+//	}
 }

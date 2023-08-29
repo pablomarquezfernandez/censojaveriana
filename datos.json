@@ -1,0 +1,22 @@
+[
+	{
+		"id": 650,
+		"nombre": "CALAMAR",
+		"codigo": "95015"
+	},
+	{
+		"id": 651,
+		"nombre": "EL RETORNO",
+		"codigo": "95025"
+	},
+	{
+		"id": 652,
+		"nombre": "MIRAFLORES",
+		"codigo": "95200"
+	},
+	{
+		"id": 653,
+		"nombre": "SAN JOSE DEL GUAVIARE",
+		"codigo": "95001"
+	}
+]
