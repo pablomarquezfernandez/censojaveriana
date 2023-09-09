@@ -1,5 +1,5 @@
 # Use una imagen base que tenga Java instalado
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 
 # Copia el código fuente de la aplicación a la imagen
 COPY . /app
