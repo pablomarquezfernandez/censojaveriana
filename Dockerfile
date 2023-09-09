@@ -2,10 +2,10 @@
 FROM tomcat:9.0-jre11
 
 # Copia el código de la aplicación al directorio de despliegue de Tomcat
-COPY . /usr/local/tomcat/webapps/mi-aplicacion
+COPY . ./mi-app
 
 # Construye el archivo WAR de la aplicación (asegúrate de que tu proyecto genere un archivo WAR)
-RUN ./mvnw clean package
+RUN ./mi-app/mvnw clean install
 # RUN ./gradlew build (si usas Gradle)
 
 # Expón el puerto en el que Tomcat escuchará (por defecto, el puerto 8080)
