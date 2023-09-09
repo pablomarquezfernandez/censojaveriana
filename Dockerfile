@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Construye el archivo JAR de la aplicación
-RUN ./app/mvnw clean package
+RUN ./mvnw clean install
 
 # Ejecuta la aplicación Spring Boot cuando se inicia el contenedor
 CMD ["java", "-jar", "target/mi-aplicacion.jar"]
