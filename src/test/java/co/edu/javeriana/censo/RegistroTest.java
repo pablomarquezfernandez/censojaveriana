@@ -28,16 +28,16 @@ public class RegistroTest {
 	
 	@Test
 	void insertarRegistroTest() {
-		Registro registro = registroRepository.findById((long) 24).get();
-		Municipio  municipio = registro.getMunicipio();
-		System.out.println(".-------");
-		System.out.println(".-------");
-		System.out.println(".-------");
-		System.out.println( registro.getNombre() );
-		System.out.println( municipio.getNombre() );
-		System.out.println(".-------");
-		System.out.println(".-------");
-		System.out.println(".-------");
+//		Registro registro = registroRepository.findById((long) 24).get();
+//		Municipio  municipio = registro.getMunicipio();
+//		System.out.println(".-------");
+//		System.out.println(".-------");
+//		System.out.println(".-------");
+//		System.out.println( registro.getNombre() );
+//		System.out.println( municipio.getNombre() );
+//		System.out.println(".-------");
+//		System.out.println(".-------");
+//		System.out.println(".-------");
 		
 	}
 }

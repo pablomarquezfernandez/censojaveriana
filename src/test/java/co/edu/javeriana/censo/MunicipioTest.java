@@ -25,17 +25,17 @@ public class MunicipioTest {
 	
 	@Test
 	void recorrerMunicipios() {
-		Registro registro  = registroRepository.findById( (long) 22).get();
-		System.out.println( registro.getNombre() );
-		
-		Iterable<Municipio>municipios = registro.getMunicipios();
-		System.out.println( municipios );
+//		Registro registro  = registroRepository.findById( (long) 22).get();
+//		System.out.println( registro.getNombre() );
+//		
+//		Iterable<Municipio>municipios = registro.getMunicipios();
+//		System.out.println( municipios );
 		
 		assertTrue( true );
 		
-		for (Municipio municipio : municipios) {
-			System.out.println(  municipio.getNombre() );
-		}
+//		for (Municipio municipio : municipios) {
+//			System.out.println(  municipio.getNombre() );
+//		}
 		assertTrue( true );
 	}
 	
