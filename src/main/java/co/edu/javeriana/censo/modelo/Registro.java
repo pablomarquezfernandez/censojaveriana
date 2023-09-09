@@ -42,9 +42,6 @@ public class Registro {
 	@JoinTable( name = "municipio_registro",  joinColumns = @JoinColumn(name = "id_registro"),  inverseJoinColumns = @JoinColumn(name = "id_municipio"))
 	List<Municipio> municipios = new ArrayList<Municipio>();;
 	
-//	@ManyToAny
-	
-	
 	public Registro() {
 		super();
 	}

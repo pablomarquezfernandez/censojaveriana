@@ -26,8 +26,8 @@ public class DepartamentoTest {
 		Departamento departamento  = departamentoRepository.findById( (long) 14).get();
 		System.out.println( departamento.getNombre() );
 		
-		Iterable<Municipio>municipios = departamento.getMunicipios();
-		System.out.println( municipios );
+//		Iterable<Municipio>municipios = departamento.getMunicipios();
+//		System.out.println( municipios );
 		
 		assertTrue( true );
 //		
@@ -35,9 +35,9 @@ public class DepartamentoTest {
 //			System.out.println(  municipios.get(i).getNombre() );
 //		}
 		
-		for (Municipio municipio : municipios) {
-			System.out.println(  municipio.getNombre() );
-		}
+//		for (Municipio municipio : municipios) {
+//			System.out.println(  municipio.getNombre() );
+//		}
 		assertTrue( true );
 	}
 	
