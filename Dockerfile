@@ -1,5 +1,6 @@
 # Use una imagen base que tenga Java instalado
-FROM openjdk:11
+# FROM openjdk:11
+FROM tomcat:9.0
 
 # Copia el código fuente de la aplicación a la imagen
 COPY . /app
@@ -11,4 +12,6 @@ WORKDIR /app
 RUN ./mvnw clean install
 
 # Ejecuta la aplicación Spring Boot cuando se inicia el contenedor
-CMD ["java", "-jar", "target/mi-aplicacion.jar"]
+# CMD ["java", "-jar", "target/mi-aplicacion.jar"]
+
+CMD ["catalina.sh", "run"]

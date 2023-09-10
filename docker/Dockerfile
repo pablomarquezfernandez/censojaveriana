@@ -1,15 +1,17 @@
-# Usa una imagen base de Tomcat
-FROM tomcat:9.0-jre11
+# Use una imagen base que tenga Java instalado
+# FROM openjdk:11
+FROM tomcat:9.0
 
-# Copia el código de la aplicación al directorio de despliegue de Tomcat
-COPY . /usr/local/tomcat/webapps/mi-aplicacion
+# Copia el código fuente de la aplicación a la imagen
+COPY . /app
 
-# Construye el archivo WAR de la aplicación (asegúrate de que tu proyecto genere un archivo WAR)
-RUN ./mvnw clean package
-# RUN ./gradlew build (si usas Gradle)
+# Establece el directorio de trabajo
+WORKDIR /app
 
-# Expón el puerto en el que Tomcat escuchará (por defecto, el puerto 8080)
-EXPOSE 8080
+# Construye el archivo JAR de la aplicación
+RUN ./mvnw clean install
 
-# Ejecuta Tomcat al iniciar el contenedor
+# Ejecuta la aplicación Spring Boot cuando se inicia el contenedor
+# CMD ["java", "-jar", "target/mi-aplicacion.jar"]
+
 CMD ["catalina.sh", "run"]
