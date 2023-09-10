@@ -14,4 +14,4 @@ RUN ./mvnw clean install
 # Ejecuta la aplicación Spring Boot cuando se inicia el contenedor
 # CMD ["java", "-jar", "target/mi-aplicacion.jar"]
 
-CMD ["catalina.sh", "run"]
+CMD ["startup.sh"]
