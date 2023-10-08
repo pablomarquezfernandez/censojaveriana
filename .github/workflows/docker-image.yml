@@ -18,7 +18,7 @@ jobs:
       run: docker build -t ghcr.io/pablomarquezfernandez/censojaveriana:v1.0 .
 
     - name: Log into GitHub Container Registry
-      run: echo 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 | docker login ghcr.io --username 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 --password-stdin
+      run: echo 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 | docker login ghcr.io --password-stdin
    
     - name: Tag the Docker image
       run: docker tag ghcr.io/pablomarquezfernandez/censojaveriana:v1.0 ghcr.io/pablomarquezfernandez/censojaveriana:v1.0
