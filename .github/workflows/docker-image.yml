@@ -19,7 +19,7 @@ jobs:
 
     - name: Log into GitHub Container Registry
       #run: echo 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 | docker login ghcr.io --password-stdin
-      run: echo pablomarquezfernandez | docker login ghcr.io --username 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 --password-stdin 
+      run: echo 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 | docker login ghcr.io --username pablomarquezfernandez --password-stdin 
    
     - name: Tag the Docker image
       run: docker tag ghcr.io/pablomarquezfernandez/censojaveriana:v1.0 ghcr.io/pablomarquezfernandez/censojaveriana:v1.0
